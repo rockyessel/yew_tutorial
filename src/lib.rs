@@ -9,8 +9,7 @@ use components::atoms::main_title::{Color, MainHeader};
 pub fn app() -> Html {
     html! {
         <main>
-            <MainHeader color={Color::Ok} title="Hi There from lib"/>
+            <MainHeader color={Color::Error} title="Hi There from lib"/>
     </main>
     }
 }
-//
