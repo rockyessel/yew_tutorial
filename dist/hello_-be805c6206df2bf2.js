@@ -355,6 +355,11 @@ function getImports() {
         wasm.__wbindgen_free(arg0, arg1 * 4);
         console.error(...v0);
     };
+    imports.wbg.__wbg_log_1f7f93998ab961f7 = function(arg0, arg1) {
+        var v0 = getArrayJsValueFromWasm0(arg0, arg1).slice();
+        wasm.__wbindgen_free(arg0, arg1 * 4);
+        console.log(...v0);
+    };
     imports.wbg.__wbg_instanceof_Window_acc97ff9f5d2c7b4 = function(arg0) {
         let result;
         try {
@@ -470,6 +475,10 @@ function getImports() {
     };
     imports.wbg.__wbg_setvalue_e5b519cca37d82a7 = function(arg0, arg1, arg2) {
         getObject(arg0).value = getStringFromWasm0(arg1, arg2);
+    };
+    imports.wbg.__wbg_target_bf704b7db7ad1387 = function(arg0) {
+        const ret = getObject(arg0).target;
+        return isLikeNone(ret) ? 0 : addHeapObject(ret);
     };
     imports.wbg.__wbg_bubbles_03eed164b4feeaf1 = function(arg0) {
         const ret = getObject(arg0).bubbles;
@@ -604,12 +613,12 @@ function getImports() {
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    imports.wbg.__wbindgen_closure_wrapper5190 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 386, __wbg_adapter_16);
+    imports.wbg.__wbindgen_closure_wrapper7823 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 491, __wbg_adapter_16);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper5240 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 404, __wbg_adapter_19);
+    imports.wbg.__wbindgen_closure_wrapper7873 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 509, __wbg_adapter_19);
         return addHeapObject(ret);
     };
 
@@ -647,7 +656,7 @@ function initSync(module) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('hello_-41e6951ad8586b21_bg.wasm', import.meta.url);
+        input = new URL('hello_-be805c6206df2bf2_bg.wasm', import.meta.url);
     }
     const imports = getImports();
 

@@ -7,7 +7,7 @@ pub fn custom_form() -> Html {
     html! {
         <form>
             <TextInput name="username" />
-            <CustomForm name="username" btn_type="submit" />
+            <CustomButton label="Submit" />
         </form>
     }
 }

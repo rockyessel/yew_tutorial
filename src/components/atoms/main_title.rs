@@ -1,4 +1,4 @@
-use serde::de::value::Error;
+// use serde::de::value::Error;
 use stylist::{style, yew::styled_component};
 use yew::prelude::*;
 
@@ -42,7 +42,7 @@ pub fn main_header(props: &Props) -> Html {
     let style_sheet = style!(
         r#"
     .normal {
-        color: white;
+        color: black;
     }
     .ok{
         color:green;
